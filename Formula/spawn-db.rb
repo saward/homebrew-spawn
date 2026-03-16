@@ -1,25 +1,25 @@
 class SpawnDb < Formula
   desc "Database Build System"
   homepage "https://spawn.dev"
-  version "0.1.13"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/saward/spawn/releases/download/v0.1.13/spawn-db-aarch64-apple-darwin.tar.xz"
-      sha256 "59fd8d941f648446fb74caa0e32a3650df3edef4c42dcfa9d87c052c7aa40c5d"
+      url "https://github.com/saward/spawn/releases/download/v0.2.0/spawn-db-aarch64-apple-darwin.tar.xz"
+      sha256 "d675743f96883d28872eabf5c54feaca4f889f99a62a01821a911db16deb4f18"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/saward/spawn/releases/download/v0.1.13/spawn-db-x86_64-apple-darwin.tar.xz"
-      sha256 "dcaf3f9b853489c57e9234aa4bc50b5175a4960aad07b006daed658af8ce208e"
+      url "https://github.com/saward/spawn/releases/download/v0.2.0/spawn-db-x86_64-apple-darwin.tar.xz"
+      sha256 "a3cdb85ec3f5cce1c0c35354b40e7330a09096191cd42ebee286d704a7fc03e0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/saward/spawn/releases/download/v0.1.13/spawn-db-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "415e4d436115f96b6d3a8eefaa27dd268ed4e9def7321bb00f0343c38d75644c"
+      url "https://github.com/saward/spawn/releases/download/v0.2.0/spawn-db-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7be996011cfb1694516457f76199cdcb84a0fc42c5fac07ec26cf27600e32b5b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/saward/spawn/releases/download/v0.1.13/spawn-db-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "08746780871781bfcc6c0bf28864d399ac4d67ecdab92d36c5ed6cfd14059a63"
+      url "https://github.com/saward/spawn/releases/download/v0.2.0/spawn-db-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7b0ed244fdfb3ae40aab85758896b3b457dffe34d036b56d2147c3e4346d7295"
     end
   end
   license "AGPL-3.0-only"
