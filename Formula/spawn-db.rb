@@ -1,25 +1,25 @@
 class SpawnDb < Formula
   desc "Database Build System"
   homepage "https://spawn.dev"
-  version "0.2.2"
+  version "0.2.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/saward/spawn/releases/download/v0.2.2/spawn-db-aarch64-apple-darwin.tar.xz"
-      sha256 "d4a963753a82225a0d952fef2e51b2f00e558afbbf91674b823046e6a284206b"
+      url "https://github.com/saward/spawn/releases/download/v0.2.3/spawn-db-aarch64-apple-darwin.tar.xz"
+      sha256 "ae733eafd45409a3d9850e94aa00967f98b01435359dcf2d272ae9ffe789261d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/saward/spawn/releases/download/v0.2.2/spawn-db-x86_64-apple-darwin.tar.xz"
-      sha256 "a2f7f9a228860f690dc228affa0135971623a148f68cb9eee413bd9ecf17d1da"
+      url "https://github.com/saward/spawn/releases/download/v0.2.3/spawn-db-x86_64-apple-darwin.tar.xz"
+      sha256 "41f8b1aebd88195506eb0eb24b4916714a4768c50ba7c896541249fd73d82625"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/saward/spawn/releases/download/v0.2.2/spawn-db-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3cce1359e743469349d51fa41dc2e4b59c6a696fe331adc5b7d41c050712d44d"
+      url "https://github.com/saward/spawn/releases/download/v0.2.3/spawn-db-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f14cd92a48002da44b75a89513df7ccd15e68e43af1e35060ccdb4210d4eb888"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/saward/spawn/releases/download/v0.2.2/spawn-db-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8247df2e7e6c110486dd3062718b1f8f35d7466157131f4a651fe2a4919ab51a"
+      url "https://github.com/saward/spawn/releases/download/v0.2.3/spawn-db-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b7cd963fae9812447321fec8b8b1c0fb2725e8a4e7f20643e3dc631ed8e7e02f"
     end
   end
   license "AGPL-3.0-only"
@@ -48,10 +48,18 @@ class SpawnDb < Formula
   end
 
   def install
-    bin.install "spawn" if OS.mac? && Hardware::CPU.arm?
-    bin.install "spawn" if OS.mac? && Hardware::CPU.intel?
-    bin.install "spawn" if OS.linux? && Hardware::CPU.arm?
-    bin.install "spawn" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "spawn"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "spawn"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "spawn"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "spawn"
+    end
 
     install_binary_aliases!
 
